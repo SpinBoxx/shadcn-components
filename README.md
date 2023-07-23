@@ -1,3 +1,10 @@
+# Informations sur le projet 
+
+- Template Nextjs de base
+- Contient prettier avec un configuration de base ainsi qu'un plugin Tailwindcss pour formatter les classes Tailwindcss
+- Contient également eslint avec une configuration de base
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
