@@ -3,6 +3,8 @@
 - Template Nextjs de base
 - Contient prettier avec un configuration de base ainsi qu'un plugin Tailwindcss pour formatter les classes Tailwindcss
 - Contient également eslint avec une configuration de base
+- Contient une bdd Prisma avec 2 entités de base User et Post
+  - Lancer une migration après une modification des schemas : npx prisma migrate dev --name <nom_de_la_migration> [`Documentation officielle`](https://www.prisma.io/docs/getting-started/quickstart).
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
