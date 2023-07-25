@@ -1,6 +1,8 @@
+import Navbar from "@/components/navbar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,10 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
-        <div className="p-9 pt-3">ok</div>
-      </body>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <body className={inter.className + `dark:bg-slate-900`}>
+          <Navbar />
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
