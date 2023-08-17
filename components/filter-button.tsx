@@ -46,9 +46,9 @@ export function PopoverFilter({ children, align }: Props) {
     }
   }, [selectedValuesTags]);
   return (
-    <>
+    <div className="mt-4 flex flex-col sm:flex-row sm:justify-between md:justify-start md:gap-5 ">
       <Popover>
-        <PopoverTrigger asChild>
+        <PopoverTrigger asChild className="">
           <Button variant="outline">{children}</Button>
         </PopoverTrigger>
         <PopoverContent align={align} className="w-80">
@@ -76,24 +76,28 @@ export function PopoverFilter({ children, align }: Props) {
           </div>
         </PopoverContent>
       </Popover>
-      <div className="flex justify-between">
-        <div className="mt-10">
-          <Label>Voici nos differents status</Label>
-          <ul>
+      <div className="mx-1 mt-6 flex gap-10 sm:mt-0 md:mx-auto">
+        <div>
+          <Label className="font-bold">Our different statuses filtered</Label>
+          <ul className="mt-2 list-inside">
             {filteredStatuses.map((status) => (
-              <li key={status.value}>{status.label}</li>
+              <li className="list-disc text-sm" key={status.value}>
+                {status.label}
+              </li>
             ))}
           </ul>
         </div>
-        <div className="mt-10">
-          <Label>Voici nos differents tags</Label>
-          <ul>
+        <div>
+          <Label className="font-bold">Our different tags filtered</Label>
+          <ul className="mt-2  list-inside">
             {filteredTags.map((tag) => (
-              <li key={tag.value}>{tag.label}</li>
+              <li className="list-disc text-sm" key={tag.value}>
+                {tag.label}
+              </li>
             ))}
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 }
