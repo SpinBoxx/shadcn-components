@@ -5,7 +5,7 @@ import { Filter } from "lucide-react";
 export default function Home() {
   return (
     <main className="grid grid-cols-1 p-8 lg:grid-cols-2 lg:gap-4">
-      <div className="rounded-lg bg-slate-800 p-3 shadow shadow-white">
+      <div className="rounded-lg border border-slate-600 p-4 dark:border-slate-800">
         <Heading
           title="Popover filter"
           description="A little component to filter one or many properties"

@@ -18,12 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <body className={inter.className + `dark:bg-slate-900`}>
+      <body className={inter.className + `dark:bg-slate-900`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Navbar />
           {children}
-        </body>
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
